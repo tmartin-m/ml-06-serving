@@ -20,6 +20,9 @@ authors:
     given-names: Denise M.
     orcid: "https://orcid.org/0000-0001-6165-7389"
     affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
+  - family-names: Martin
+    given-names: Taylor M.
+    affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
 
 repository-code: "https://github.com/denisecase/ml-06-serving"
 url: "https://github.com/denisecase/ml-06-serving"

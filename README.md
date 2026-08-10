@@ -67,9 +67,9 @@ See [docs/your-files.md](docs/your-files.md) for more.
 
 Links:
 
-- [ml_06_case.ipynb](notebooks/ml_06_case.ipynb)
-- [ml_06_case.ipynb](notebooks/ml_06_tmartin.ipynb)
-- [ml_06_case.ipynb](notebooks/ml_06_tmartin_iris.ipynb)
+- [ml_06_case.ipynb](ml_06_case.ipynb)
+- [ml_06_tmartin.ipynb](ml_06_tmartin.ipynb)
+- [ml_06_case.ipynb](ml_06_tmartin_iris.ipynb)
 
 ## Working Files
 
@@ -348,7 +348,7 @@ curl -X POST https://denisecase-ml-penguin-predictor.hf.space/predict \
 ## Findings and Visuals
 
 ![Error](Screenshot 2026-08-09 230434.png)
-![Predictions](Screenshot 2026-08-09 230302.png)
+![Predictions](ml-06-serving\Screenshot 2026-08-09 230434.png)
 
 ## Project Documentation
 

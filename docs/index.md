@@ -30,68 +30,47 @@ to get the example projects running on your machine.
 
 ## Phase 4. Technical Modification
 
-Describe your small technical modification to the example project.
-
-Include:
-
-- What you changed
-- Why you chose that change
-- How you verified that it worked
-- What result, output, chart, metric, or behavior confirmed the change
-
-Compared with the example project,
-explain what is different and why the change matters.
-
-Was it easy, or surprisingly challenging and why do you think so?
+FOr phase 4 I chose to try two different easy modifications. The first modification is I updated for the feature values for the model prediction. I used the measures for an actual instance from the penguins dataset to be able to verify if the prediction was accurate or not. After updating the model did correctly predict the species as Adelie. The second modification I tried was updating the target value from species to island. I left the update feature values so I would be able to verify if the model prediction was accruate or not. The model predicition was not accurate for the island. Without the accuracy metrics these changes gave me a better idea of how accurate the model was.
 
 ## Phase 5. Custom Project
 
-Describe your custom project and how you made your modeling decisions.
+I chose to use the Iris dataset for my custom project. Having worked with this specific set several times I was familiar with the original features and wanted to be able to build upon my work from the last module.
 
-Be specific about what changed from the example project.
+The dataset works well with the example project leaving the species as the target value and using the other 4 original features to train the model and make the prediction.
 
 ### Basis and Data
 
-Describe the dataset, input, or example you started with.
+I chose to use the Iris dataset for my custom project. The original dataset includes 4 flower measurements including sepal length, sepal width, petal length and petal width. The 5th original feature is species. There are 150 instances included in the dataset which could be a downside and lead to a generalization of any results or analysis.
 
-Include:
-
-- The original example dataset or input
-- The data source
-- Why you chose it, kept it, or changed it
-- Any important limitations or assumptions
+This is a Seaborn dataset like the example project but it has fewer features and instances to train and test the model on.
 
 ### Example Model and Serving Approach
 
-Describe the model being served and how it is deployed.
+The project is a supervised machine learning problem because of the chosen target variable, species. It is a classification problem because the target is 3 categories; setosa, versicolor and viriginica. This is appropriate because the target is a category instead of a numerical value. The model will be working to learn the relationship between flower measurements and their species labels.
 
-Include:
-
-- What the model predicts and what inputs it expects
-- How the model was trained and saved
-- How the API receives a request and returns a prediction
-- Where the model is deployed (local, Render, Hugging Face, or other)
+The model predicts the species of the iris based on the inputs of the other 4 features, sepal length, sepal width, petal length and petal width. The model was trained on 120 instances leaving 30 for testing. The model is trained with a random forest classifer. The API is built with FastAPI, a JSON request is sent, the API loads the trained model, creates a feature vector, snds the feature to the model and returns the target prediction. The model is currently deployed locally.
 
 ### Custom Application
 
-Describe your custom dataset, model, or API changes.
+The biggest change from the example project was the dataset and inputs. I updated to the Seaborn iris dataset and changed the input features to correspond with the dataset change. The model and endpoint remain the same using the random forest classifer and using it to predict the species.
 
-Include:
+I elected to make these changes for my custom project because I was familiar with the dataset from past modules projects and knew I would be able to tell if the updates were functioning correctly when I completed the project.
 
-- What you changed from the example (dataset, model, endpoint, or inputs)
-- Why you made those changes
-- How you verified that your custom model or API works correctly
+I verified the project was successful by running the serve and model build python files and running all cells in the notebook.
 
 ### Summary
 
-Summarize your custom project.
+I updated a machine learning application so that classifies Iris flower species based on flower measurements. The project uses a Random Forest Classifier trained on the Iris dataset and exposes predictions through a FastAPI web service. I loaded and prepared the data and trained the model used the original 4 features:
 
-Include:
+  - Sepal length
+  - Sepal width
+  - Petal length
+  - Petal width
 
-- How you implemented your custom model or API
-- What results you got
-- What you learned
-- How well you exercised the skills covered in this project
-- What kinds of real problems you could apply these skills to in the future
+The dataset was split into training (80%) and testing (20%) sets. The Random forest classifer was trained using 200 decision trees. The model was evaluated using the accuracy metric which results in 90% of the test cases being predicted correctly. The trained model was saved as a reusable artifact. The model was then loaded, accedpted JSON input with feature measurements, validated the data and generated the prediction.
 
-Display at least one image or screenshot showing your work.
+![Prediction](Screenshot 2026-08-09 222408.png)
+
+I don't feel like I exercised the skills of this weeks module as well as I could have. I was nervous to make any more difficult updates having no prior experience with serving models. I feel like if I had more time I would of attempted a more complex project either updating the model or the hosting of the API in some way.
+
+These skills could have endless uses with real world problems. Personally I would like to apply them to my current role as a Financial Analsyst at a hospital to try to train model to predict if people will end up being repeat patients. I could have also used these skills in a previous position at a credit union to predict average loan amounts or loan volumes for the month to try to clean up or budgeting and profitability issues.

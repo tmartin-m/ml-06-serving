@@ -1,4 +1,4 @@
-r"""serve_tmartin_iris.py - example.
+"""serve_tmartin_iris.py - example.
 
 A FastAPI service that loads
 a trained penguin species classifier
@@ -27,17 +27,17 @@ uv run uvicorn mlstudio.serve_tmartin_iris:app             # production
 
 Then send a request - open a new terminal and run
 
-If macOS or Linux, use \ line continuation characters:
+If macOS or Linux, use \\ line continuation characters:
 
     curl -X POST http://127.0.0.1:8000/predict \
          -H "Content-Type: application/json" \
          -d '{"sepal_length": 5.1, "sepal+width": 3.5, "petal_length": 1.4, "petal_width": 0.2}'
 
-If Windows (PowerShell), use ` instead of \ for line continuation:
+If Windows (PowerShell), use ` instead of \\ for line continuation:
 
     curl -X POST http://127.0.0.1:8000/predict `
          -H "Content-Type: application/json" `
-         -d '{"sepal_length": 5.1, "sepal+width": 3.5, "petal_length": 1.4, "petal_width": 0.2}'
+         -d '{"sepal_length": 7.1 , "sepal_width": 3.0, "petal_length": 5.9, "petal_width": 2.1}'
 OBS:
   Don't edit this file - it should remain a working example.
   Copy it, rename it, and modify your copy if you want to experiment.

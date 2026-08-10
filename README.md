@@ -68,6 +68,8 @@ See [docs/your-files.md](docs/your-files.md) for more.
 Links:
 
 - [ml_06_case.ipynb](notebooks/ml_06_case.ipynb)
+- [ml_06_case.ipynb](notebooks/ml_06_tmartin.ipynb)
+- [ml_06_case.ipynb](notebooks/ml_06_tmartin_iris.ipynb)
 
 ## Working Files
 
@@ -192,37 +194,6 @@ You accidentally started Python interactive mode.
 It happens.
 Press `Ctrl+c` (both keys together) or `Ctrl+Z` then `Enter` on Windows.
 
-## Example Output (Can Remove this Section after You Verify)
-
-```shell
-| INFO | MB | Load data.................
-| INFO | MB | Loading dataset: penguins
-| INFO | MB | Loaded: 344 rows, 7 columns
-| INFO | MB | Model rows (after dropping missing): 342
-| INFO | MB | Split data................
-| INFO | MB | Train instances: 273
-| INFO | MB | Test instances:  69
-| INFO | MB | Train model...............
-| INFO | MB | Training RandomForestClassifier on 273 instances
-| INFO | MB | Training complete
-| INFO | MB | Evaluate model............
-| INFO | MB | Test accuracy: 1.000
-| INFO | MB | Save model................
-| INFO | MB | Saved model to: artifacts\model.joblib
-| INFO | MB | Summarize.................
-| INFO | MB | ========================
-| INFO | MB | SUMMARY
-| INFO | MB | ========================
-| INFO | MB | Dataset:  penguins
-| INFO | MB | Target:   species
-| INFO | MB | Features: ['bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g']
-| INFO | MB | Artifact: artifacts\model.joblib
-| INFO | MB | ========================
-| INFO | MB | ========================
-| INFO | MB | Executed successfully!
-| INFO | MB | ========================
-```
-
 ## Terminal 2: Right-click and Rename "server"
 
 Open a second terminal. Right-click to rename this terminal "server".
@@ -322,17 +293,6 @@ curl -X POST http://127.0.0.1:8000/predict `
      -H "Content-Type: application/json" `
      -d '{"bill_length_mm": 39.1, "bill_depth_mm": 18.7, "flipper_length_mm": 181, "body_mass_g": 3750}'
 ```
-
-### macOS / Linux
-
-```shell
-# Task 3. Send a request to the server
-
-curl -X POST http://127.0.0.1:8000/predict \
-     -H "Content-Type: application/json" \
-     -d '{"bill_length_mm": 39.1, "bill_depth_mm": 18.7, "flipper_length_mm": 181, "body_mass_g": 3750}'
-```
-
 Should return the predicted result as JSON data:
 
 ```json
@@ -387,26 +347,8 @@ curl -X POST https://denisecase-ml-penguin-predictor.hf.space/predict \
 
 ## Findings and Visuals
 
-Take screenshots of your charts and provide them here with a discussion.
-In Markdown, display a figure by using:
-an exclamation mark immediately followed by square brackets containing a useful caption
-immediately followed by parentheses containing the relative path to your figure.
-Note: When you start typing the path with a dot (.) for "here, in this directory",
-the IDE may help complete the path.
-
-In your custom project, follow this example, but
-
-- your figures and narrative should reflect your work,
-- this `README.md` should include your commands, process, and visuals, and
-- `docs/index.md` should include your narrative.
-
-Remove unnecessary instructional comments in your custom files.
-
-Update figures to present interesting results from your custom project:
-
-![Provide a Useful Caption](./docs/images/Figure_1.png)
-
-![Provide a Useful Caption](./docs/images/Figure_2.png)
+![Error](Screenshot 2026-08-09 230434.png)
+![Predictions](Screenshot 2026-08-09 230302.png)
 
 ## Project Documentation
 

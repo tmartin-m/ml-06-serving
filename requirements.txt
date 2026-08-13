@@ -8,3 +8,6 @@ scikit-learn
 pandas
 seaborn
 datafun-toolkit
+flask
+gunicorn
+numpy

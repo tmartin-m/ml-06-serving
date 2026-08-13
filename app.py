@@ -3,7 +3,7 @@
 # ============================================================
 
 from flask import Flask, request, jsonify
-from joblib import load
+from joblib import load, dump
 import pandas as pd
 
 # Create Flask app
@@ -85,3 +85,5 @@ def predict():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
+dump(model, "model.joblib")
